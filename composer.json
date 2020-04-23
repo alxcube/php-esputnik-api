@@ -1,5 +1,5 @@
 {
-    "name": "n10ty/php-esputnik-api",
+    "name": "alxcube/php-esputnik-api",
     "description": "Library for e-sputnik.com REST api",
     "type": "library",
     "keywords": ["esputnik", "e-sputnik.com", "api"],
