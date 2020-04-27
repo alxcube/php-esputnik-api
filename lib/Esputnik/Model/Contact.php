@@ -103,6 +103,17 @@ class Contact
     }
 
     /**
+     * @param ContactField[] $fields
+     * @return $this
+     */
+    public function setFields($fields)
+    {
+        $this->fields = $fields;
+
+        return $this;
+    }
+
+    /**
      * @param Field $fields
      */
     public function addField(Field $fields)
