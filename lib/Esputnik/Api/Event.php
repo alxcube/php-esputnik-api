@@ -26,7 +26,7 @@ class Event extends AbstractApi
      */
     protected function serializeParamsArray(array $params)
     {
-        array_map(function ($param) {
+        return array_map(function ($param) {
             /**
              * @var EventParam $param
              */
