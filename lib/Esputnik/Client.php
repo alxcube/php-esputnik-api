@@ -7,6 +7,7 @@ use Esputnik\Api\Balance;
 use Esputnik\Api\Callouts;
 use Esputnik\Api\Contact;
 use Esputnik\Api\Contacts;
+use Esputnik\Api\Event;
 use Esputnik\Api\Group;
 use Esputnik\Api\Groups;
 use Esputnik\Api\Message;
@@ -58,6 +59,9 @@ class Client
                 break;
             case 'message':
                 $api = new Message($this);
+                break;
+            case 'event':
+                $api = new Event($this);
                 break;
             default:
                 throw new InvalidArgumentException(sprintf('Undefined api instance called: "%s"', $name));
