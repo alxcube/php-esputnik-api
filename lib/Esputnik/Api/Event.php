@@ -16,25 +16,24 @@ class Event extends AbstractApi
         return $this->post('event', [
             'eventTypeKey' => $event->getEventTypeKey(),
             'keyValue' => $event->getKeyValue(),
-            'params' => $this->serializeParams($event->getParams())
+            'params' => $this->serializeParamsArray($event->getParams())
         ]);
     }
 
     /**
      * @param EventParam[] $params
+     * @return array
      */
-    protected function serializeParams(array $params)
+    protected function serializeParamsArray(array $params)
     {
-        return json_encode(
-            array_map(function ($param) {
-                /**
-                 * @var EventParam $param
-                 */
-                return [
-                    'name' => $param->getName(),
-                    'value' => $param->getValue()
-                ];
-            }, $params)
-        );
+        array_map(function ($param) {
+            /**
+             * @var EventParam $param
+             */
+            return [
+                'name' => $param->getName(),
+                'value' => $param->getValue()
+            ];
+        }, $params);
     }
 }
