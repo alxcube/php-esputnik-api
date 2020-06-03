@@ -9,7 +9,7 @@ class Contact
     private $lastName;
     private $channels = [];
     private $address;
-    private $fields = [];
+    private $fields = null;
     private $addressBookId;
     private $contactKey;
     private $ordersInfo;
