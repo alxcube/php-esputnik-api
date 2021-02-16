@@ -155,4 +155,14 @@ class Message extends AbstractApi
             'ids' => join(',', $ids)
         ]);
     }
+
+    /**
+     * Получить статус сообщения
+     * @param $ids
+     * @return \Psr\Http\Message\StreamInterface
+     */
+    public function status($ids)
+    {
+        return $this->get('message/status/', ['ids' => implode(',', $ids)]);
+    }
 }
